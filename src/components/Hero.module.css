@@ -1,35 +1,22 @@
 .hero {
-  position: relative;
   min-height: 92vh;
   padding: 6rem 1.5rem 4rem;
-  overflow: hidden;
-  background-image: url('/mezo-hero.png');
-  background-size: cover;
-  background-position: center;
-}
-
-.overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.25);
-  z-index: 0;
+  background: linear-gradient(135deg, #fff8ee 0%, #f7e7cb 100%);
 }
 
 .inner {
-  position: relative;
-  z-index: 1;
-  width: min(1200px, 100%);
+  width: min(1100px, 100%);
   margin: 0 auto;
   min-height: 70vh;
   display: flex;
   align-items: center;
 }
 
-.copy {
-  max-width: 560px;
+.content {
+  max-width: 680px;
   display: grid;
   gap: 1rem;
-  color: #ffffff;
+  color: #1e1a16;
 }
 
 .badge {
@@ -38,9 +25,8 @@
   width: fit-content;
   padding: 0.7rem 1rem;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.16);
-  backdrop-filter: blur(10px);
-  color: #ffffff;
+  background: rgba(217, 115, 28, 0.12);
+  color: #b25d13;
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.24em;
@@ -49,17 +35,17 @@
 
 .title {
   margin: 0;
-  font-size: clamp(2.4rem, 4.5vw, 3.7rem);
+  font-size: clamp(2.2rem, 4.5vw, 3.4rem);
   line-height: 1.05;
   letter-spacing: -0.03em;
-  color: #ffffff;
+  color: #1e1a16;
 }
 
 .subtitle {
   margin: 0;
   font-size: 1.08rem;
   line-height: 1.7;
-  color: rgba(255, 255, 255, 0.92);
+  color: #5d493a;
   max-width: 34rem;
 }
 
@@ -89,12 +75,13 @@
 .primary {
   background: #d9731c;
   color: #ffffff;
-  box-shadow: 0 20px 38px rgba(217, 115, 28, 0.25);
+  box-shadow: 0 20px 38px rgba(217, 115, 28, 0.2);
 }
 
 .secondary {
-  background: rgba(255, 255, 255, 0.92);
+  background: #ffffff;
   color: #161616;
+  border: 1px solid rgba(17, 17, 17, 0.08);
 }
 
 @media (max-width: 768px) {
@@ -105,11 +92,10 @@
 
   .inner {
     min-height: auto;
-    align-items: flex-end;
-    padding-bottom: 1rem;
+    align-items: center;
   }
 
-  .copy {
+  .content {
     max-width: 100%;
   }
 

@@ -3,12 +3,11 @@ import styles from './Hero.module.css'
 export default function Hero() {
   return (
     <section className={styles.hero} id="hero">
-      <div className={styles.overlay} aria-hidden="true" />
       <div className={styles.inner}>
-        <div className={styles.copy}>
+        <div className={styles.content}>
           <span className={styles.badge}>BIENVENUE CHEZ MEZO</span>
-          <h1 className={styles.title}>Bienvenue chez Mezo</h1>
-          <p className={styles.subtitle}>Boucherie Halal &amp; Épicerie du Monde</p>
+          <h1 className={styles.title}>MEZO SUPERMARCHÉ &amp; BOUCHERIE</h1>
+          <p className={styles.subtitle}>Boucherie Halal &amp; Épicerie du Monde à Genève.</p>
           <div className={styles.actions}>
             <a className={`${styles.button} ${styles.primary}`} href="#boucherie">
               Découvrir nos rayons
