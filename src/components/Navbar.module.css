@@ -1,18 +1,17 @@
 .header {
-  position: sticky;
-  top: 0;
-  z-index: 60;
+  position: absolute;
+  inset: 0 0 auto 0;
+  z-index: 70;
   display: grid;
   gap: 0.36rem;
-  background: rgba(250, 244, 234, 0.95);
-  backdrop-filter: blur(16px);
+  background: transparent;
+  backdrop-filter: blur(0);
   transition: background 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
 }
 
 .header.scrolled {
-  background: rgba(255, 255, 255, 0.98);
-  border-bottom: 1px solid rgba(17, 17, 17, 0.08);
-  box-shadow: 0 24px 48px rgba(17, 17, 17, 0.08);
+  background: rgba(8, 10, 12, 0.8);
+  box-shadow: 0 20px 44px rgba(0, 0, 0, 0.18);
 }
 
 .topBar {
@@ -21,13 +20,9 @@
   gap: 1rem;
   padding: 0.75rem clamp(1rem, 4vw, 2rem);
   font-size: 0.82rem;
-  color: #42382f;
+  color: rgba(255, 255, 255, 0.9);
   letter-spacing: 0.02em;
-  background: rgba(255, 249, 241, 0.65);
-}
-
-.header.scrolled .topBar {
-  color: #574b3f;
+  background: rgba(0, 0, 0, 0.22);
 }
 
 .topItem {
@@ -42,10 +37,6 @@
   justify-content: space-between;
   gap: 1rem;
   padding: 1rem clamp(1rem, 4vw, 2rem);
-  background: transparent;
-}
-
-.header.scrolled .navbar {
   background: transparent;
 }
 
@@ -64,7 +55,7 @@
 .brandText {
   display: grid;
   gap: 0.08rem;
-  color: #11130f;
+  color: #ffffff;
   font-size: 0.78rem;
   line-height: 1.2;
 }
@@ -80,13 +71,7 @@
   font-size: 0.78rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: #5c5b55;
-}
-
-.header.scrolled .brandText,
-.header.scrolled .brandText strong,
-.header.scrolled .brandText span {
-  color: var(--text);
+  color: rgba(255, 255, 255, 0.78);
 }
 
 .nav {
@@ -106,19 +91,14 @@
 
 .link {
   font-size: 0.95rem;
-  color: #2f2a24;
+  color: rgba(255, 255, 255, 0.95);
   font-weight: 500;
   transition: color 0.25s ease, transform 0.25s ease;
 }
 
 .link:hover,
 .link:focus-visible {
-  color: #d9731c;
-}
-
-.link:hover,
-.link:focus-visible {
-  color: var(--primary);
+  color: #ffd09a;
   transform: translateY(-1px);
 }
 
@@ -134,9 +114,9 @@
   gap: 0.7rem;
   padding: 0.7rem 0.95rem;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.9);
-  border: 1px solid rgba(17, 17, 17, 0.08);
-  color: #2f2a24;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
   transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease;
 }
 
@@ -157,12 +137,8 @@
 }
 
 .language select option {
-  background: #ffffff;
-  color: #111111;
-}
-
-.language select:focus {
-  outline: none;
+  background: #111111;
+  color: #ffffff;
 }
 
 .whatsapp {
@@ -172,23 +148,23 @@
   min-height: 3.2rem;
   padding: 0 1.6rem;
   border-radius: 999px;
-  background: var(--secondary);
+  background: #d9731c;
   color: #ffffff;
   font-weight: 600;
-  box-shadow: 0 16px 36px rgba(20, 108, 67, 0.16);
+  box-shadow: 0 16px 36px rgba(217, 115, 28, 0.25);
   transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
 }
 
 .whatsapp:hover {
   transform: translateY(-1px);
-  box-shadow: 0 22px 48px rgba(20, 108, 67, 0.28);
+  box-shadow: 0 22px 48px rgba(217, 115, 28, 0.3);
 }
 
 .language:hover,
 .language:focus-within {
   transform: translateY(-1px);
-  background: rgba(255, 255, 255, 0.22);
-  border-color: rgba(255, 255, 255, 0.28);
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
 @media (max-width: 960px) {

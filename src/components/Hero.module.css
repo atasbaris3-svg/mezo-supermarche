@@ -1,173 +1,108 @@
 .hero {
   position: relative;
-  min-height: 90vh;
-  padding: 2rem 1.5rem 4rem;
-  background:
-    linear-gradient(90deg, rgba(8, 10, 12, 0.92) 0%, rgba(8, 10, 12, 0.78) 42%, rgba(8, 10, 12, 0.48) 100%),
-    url('/mezo-hero-new.png.png') center/cover no-repeat;
+  min-height: 680px;
+  padding: 120px 7% 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  color: white;
+  background-image: url("/mezo-hero-new.png");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
 }
 
-.inner {
-  width: min(1220px, 100%);
-  margin: 0 auto;
-  min-height: 78vh;
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 2.5rem;
-  align-items: center;
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(15, 15, 15, 0.68),
+    rgba(15, 15, 15, 0.38),
+    rgba(15, 15, 15, 0.18)
+  );
+  z-index: 1;
 }
 
 .content {
-  max-width: 640px;
-  display: grid;
-  gap: 1rem;
-  color: #ffffff;
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
 }
 
 .badge {
-  display: inline-flex;
-  align-items: center;
-  width: fit-content;
-  padding: 0.7rem 1rem;
+  display: inline-block;
+  padding: 10px 16px;
   border-radius: 999px;
-  background: rgba(217, 115, 28, 0.16);
-  color: #ffd09a;
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(10px);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #ffd7a3;
 }
 
-.title {
-  margin: 0;
-  font-size: clamp(2.2rem, 4.6vw, 3.8rem);
-  line-height: 1.02;
-  letter-spacing: -0.03em;
-  color: #ffffff;
-  text-transform: uppercase;
+h1 {
+  margin: 24px 0;
+  font-size: clamp(48px, 7vw, 88px);
+  line-height: 0.95;
+  letter-spacing: -3px;
 }
 
-.lead {
-  margin: 0;
-  font-size: clamp(1.15rem, 2vw, 1.35rem);
-  font-weight: 600;
-  color: #ffcc7d;
+.subtitle {
+  max-width: 620px;
+  font-size: 20px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
 }
 
-.description {
-  margin: 0;
-  font-size: 1.06rem;
-  line-height: 1.75;
-  color: rgba(255, 255, 255, 0.86);
-  max-width: 36rem;
-}
-
-.actions {
+.trust {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
-  margin-top: 0.5rem;
+  gap: 12px;
+  margin-top: 28px;
 }
 
-.button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 3.7rem;
-  padding: 0 1.4rem;
+.trust span {
+  padding: 12px 16px;
   border-radius: 999px;
-  font-weight: 700;
-  text-decoration: none;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.button:hover {
-  transform: translateY(-2px);
-}
-
-.primary {
-  background: #d9731c;
-  color: #ffffff;
-  box-shadow: 0 20px 40px rgba(217, 115, 28, 0.25);
-}
-
-.secondary {
   background: rgba(255, 255, 255, 0.14);
-  color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
+  font-weight: 700;
 }
 
 .infoCard {
-  padding: 2rem;
-  border-radius: 2rem;
-  background: rgba(255, 255, 255, 0.95);
-  color: #171717;
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 2;
+  width: 340px;
+  padding: 28px;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.92);
+  color: #1f1f1f;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.25);
 }
 
-.infoTitle {
-  margin: 0 0 1rem;
-  font-size: 1.35rem;
-  color: #171717;
+.infoCard h3 {
+  margin: 0 0 18px;
+  font-size: 34px;
+  color: #d97706;
 }
 
-.infoList {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  gap: 0.9rem;
-  color: #4f4b44;
-}
-
-.infoList li {
-  display: grid;
-  gap: 0.2rem;
-}
-
-.infoList strong {
-  color: #171717;
-  font-size: 0.95rem;
-}
-
-.link {
-  display: inline-flex;
-  margin-top: 1.2rem;
-  color: #d9731c;
+.infoCard p {
+  margin: 12px 0;
   font-weight: 700;
+  line-height: 1.4;
 }
 
 @media (max-width: 900px) {
-  .inner {
-    grid-template-columns: 1fr;
-    min-height: auto;
-    padding-top: 2rem;
-  }
-
-  .infoCard {
-    max-width: 560px;
-  }
-}
-
-@media (max-width: 640px) {
   .hero {
-    padding: 1.25rem 1rem 3rem;
-  }
-
-  .content {
-    max-width: 100%;
-  }
-
-  .actions {
     flex-direction: column;
-  }
-
-  .button {
-    width: 100%;
+    align-items: flex-start;
+    padding-top: 110px;
   }
 
   .infoCard {
-    padding: 1.5rem;
+    width: 100%;
   }
 }
