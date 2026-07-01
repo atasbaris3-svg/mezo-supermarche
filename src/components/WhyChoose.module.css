@@ -1,0 +1,67 @@
+.why {
+  padding: 7rem 2rem;
+  background: rgba(255, 249, 241, 1);
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.5rem;
+  padding: 2.5rem;
+  border-radius: 2rem;
+  background: #ffffff;
+  border: 1px solid rgba(17, 17, 17, 0.08);
+  box-shadow: 0 30px 80px rgba(17, 17, 17, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 40px 110px rgba(17, 17, 17, 0.12);
+}
+
+.icon {
+  width: 3.4rem;
+  min-width: 3.4rem;
+  height: 3.4rem;
+  border-radius: 1rem;
+  display: grid;
+  place-items: center;
+  background: rgba(22, 67, 43, 0.12);
+  color: #18442e;
+  font-size: 1.6rem;
+}
+
+.card h3 {
+  margin: 0 0 0.65rem;
+  font-size: 1.28rem;
+}
+
+.card p {
+  margin: 0;
+  color: #5d5b54;
+  font-size: 0.98rem;
+  line-height: 1.8;
+}
+
+@media (max-width: 980px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .why {
+    padding: 3rem 1.25rem;
+  }
+}

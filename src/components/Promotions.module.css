@@ -1,0 +1,80 @@
+.promotions {
+  padding: 7rem 2rem;
+  background: #fbf2e8;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1.3fr 0.9fr;
+  gap: 2rem;
+  align-items: start;
+  margin-top: 3rem;
+}
+
+.imagePanel {
+  min-height: 560px;
+  border-radius: 2.5rem;
+  overflow: hidden;
+  background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  box-shadow: 0 40px 110px rgba(17, 17, 17, 0.08);
+}
+
+.imageMask {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.features {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.featureCard {
+  padding: 2rem;
+  border-radius: 2rem;
+  background: #ffffff;
+  border: 1px solid rgba(17, 17, 17, 0.08);
+  box-shadow: 0 28px 80px rgba(17, 17, 17, 0.06);
+}
+
+.featureCard h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.45rem;
+  line-height: 1.2;
+  color: #11130f;
+}
+
+.featureCard p {
+  margin: 0;
+  color: #5f655f;
+  line-height: 1.85;
+  font-size: 1rem;
+}
+
+@media (max-width: 1024px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .imagePanel {
+    min-height: 420px;
+  }
+}
+
+@media (max-width: 640px) {
+  .promotions {
+    padding: 4rem 1.25rem;
+  }
+
+  .imagePanel {
+    min-height: 320px;
+  }
+
+  .featureCard {
+    padding: 1.75rem;
+  }
+}
