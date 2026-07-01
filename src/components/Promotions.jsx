@@ -1,22 +1,18 @@
 import SectionHeader from './SectionHeader'
 import styles from './Promotions.module.css'
 
-const features = [
+const promos = [
   {
-    title: 'Viandes Halal Certifiées',
-    detail: 'Sélectionnées auprès de fournisseurs rigoureux, préparées selon les normes halal les plus strictes.',
+    title: 'Viande fraîche',
+    detail: 'Des pièces de boucherie sélectionnées avec soin, prêtes à cuisiner chaque jour.',
   },
   {
-    title: 'Préparation Quotidienne',
-    detail: 'Préparées chaque jour par notre équipe pour garantir fraîcheur et saveur dès l’ouverture.',
+    title: 'Fruits & Légumes',
+    detail: 'Une offre vivante de produits du marché, soigneusement choisis pour leur fraîcheur.',
   },
   {
-    title: 'Qualité Premium',
-    detail: 'Des coupes tendres et des morceaux choisis pour une expérience gourmande en toute confiance.',
-  },
-  {
-    title: 'Service Personnalisé',
-    detail: 'Conseils sur mesure et commandes adaptées à vos besoins, dans un accueil chaleureux.',
+    title: 'Pain chaud',
+    detail: 'Boulangerie de proximité et pains dorés, servis frais toute la journée.',
   },
 ]
 
@@ -24,22 +20,18 @@ export default function Promotions() {
   return (
     <section className={styles.promotions} id="boucherie">
       <SectionHeader
-        eyebrow="Notre Boucherie Halal"
-        title="Un artisanat halal d’exception"
-        description="Des viandes halal soigneusement sélectionnées, préparées chaque jour par notre équipe pour garantir fraîcheur, qualité et confiance."
+        eyebrow="Nos promotions"
+        title="Des incontournables à chaque visite"
+        description="Découvrez les produits qui font la différence chez Mezo : fraîcheur, qualité et une sélection pensée pour votre quotidien."
       />
-      <div className={styles.content}>
-        <div className={styles.imagePanel}>
-          <div className={styles.imageMask} />
-        </div>
-        <div className={styles.features}>
-          {features.map((feature) => (
-            <article key={feature.title} className={styles.featureCard}>
-              <h3>{feature.title}</h3>
-              <p>{feature.detail}</p>
-            </article>
-          ))}
-        </div>
+      <div className={styles.grid}>
+        {promos.map((promo) => (
+          <article key={promo.title} className={styles.card}>
+            <div className={styles.icon} aria-hidden="true" />
+            <h3>{promo.title}</h3>
+            <p>{promo.detail}</p>
+          </article>
+        ))}
       </div>
     </section>
   )

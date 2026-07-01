@@ -1,22 +1,27 @@
 .hero {
-  min-height: 92vh;
-  padding: 6rem 1.5rem 4rem;
-  background: linear-gradient(135deg, #fff8ee 0%, #f7e7cb 100%);
+  position: relative;
+  min-height: 90vh;
+  padding: 2rem 1.5rem 4rem;
+  background:
+    linear-gradient(90deg, rgba(8, 10, 12, 0.92) 0%, rgba(8, 10, 12, 0.78) 42%, rgba(8, 10, 12, 0.48) 100%),
+    url('/mezo-hero-new.png.png') center/cover no-repeat;
 }
 
 .inner {
-  width: min(1100px, 100%);
+  width: min(1220px, 100%);
   margin: 0 auto;
-  min-height: 70vh;
-  display: flex;
+  min-height: 78vh;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 2.5rem;
   align-items: center;
 }
 
 .content {
-  max-width: 680px;
+  max-width: 640px;
   display: grid;
   gap: 1rem;
-  color: #1e1a16;
+  color: #ffffff;
 }
 
 .badge {
@@ -25,8 +30,8 @@
   width: fit-content;
   padding: 0.7rem 1rem;
   border-radius: 999px;
-  background: rgba(217, 115, 28, 0.12);
-  color: #b25d13;
+  background: rgba(217, 115, 28, 0.16);
+  color: #ffd09a;
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.24em;
@@ -35,33 +40,41 @@
 
 .title {
   margin: 0;
-  font-size: clamp(2.2rem, 4.5vw, 3.4rem);
-  line-height: 1.05;
+  font-size: clamp(2.2rem, 4.6vw, 3.8rem);
+  line-height: 1.02;
   letter-spacing: -0.03em;
-  color: #1e1a16;
+  color: #ffffff;
+  text-transform: uppercase;
 }
 
-.subtitle {
+.lead {
   margin: 0;
-  font-size: 1.08rem;
-  line-height: 1.7;
-  color: #5d493a;
-  max-width: 34rem;
+  font-size: clamp(1.15rem, 2vw, 1.35rem);
+  font-weight: 600;
+  color: #ffcc7d;
+}
+
+.description {
+  margin: 0;
+  font-size: 1.06rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.86);
+  max-width: 36rem;
 }
 
 .actions {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  margin-top: 0.4rem;
+  margin-top: 0.5rem;
 }
 
 .button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 3.8rem;
-  padding: 0 1.5rem;
+  min-height: 3.7rem;
+  padding: 0 1.4rem;
   border-radius: 999px;
   font-weight: 700;
   text-decoration: none;
@@ -75,24 +88,71 @@
 .primary {
   background: #d9731c;
   color: #ffffff;
-  box-shadow: 0 20px 38px rgba(217, 115, 28, 0.2);
+  box-shadow: 0 20px 40px rgba(217, 115, 28, 0.25);
 }
 
 .secondary {
-  background: #ffffff;
-  color: #161616;
-  border: 1px solid rgba(17, 17, 17, 0.08);
+  background: rgba(255, 255, 255, 0.14);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
 }
 
-@media (max-width: 768px) {
-  .hero {
-    min-height: 80vh;
-    padding: 5rem 1rem 3rem;
+.infoCard {
+  padding: 2rem;
+  border-radius: 2rem;
+  background: rgba(255, 255, 255, 0.95);
+  color: #171717;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.2);
+}
+
+.infoTitle {
+  margin: 0 0 1rem;
+  font-size: 1.35rem;
+  color: #171717;
+}
+
+.infoList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.9rem;
+  color: #4f4b44;
+}
+
+.infoList li {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.infoList strong {
+  color: #171717;
+  font-size: 0.95rem;
+}
+
+.link {
+  display: inline-flex;
+  margin-top: 1.2rem;
+  color: #d9731c;
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .inner {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding-top: 2rem;
   }
 
-  .inner {
-    min-height: auto;
-    align-items: center;
+  .infoCard {
+    max-width: 560px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 1.25rem 1rem 3rem;
   }
 
   .content {
@@ -105,5 +165,9 @@
 
   .button {
     width: 100%;
+  }
+
+  .infoCard {
+    padding: 1.5rem;
   }
 }
